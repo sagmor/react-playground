@@ -5,7 +5,7 @@ module.exports = {
   context: ROOT,
   entry: "./app/config/boot.jsx",
   output: {
-    filename: "bundle-[hash].js",
+    filename: "bundle.js",
     path: ROOT + "/build",
   },
   devtool: 'cheap-module-source-map',
