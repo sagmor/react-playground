@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ROOT = __dirname + '/../../..';
+var path = require('path');
+var ROOT = path.resolve(__dirname, '../../..');
 
 module.exports = {
   context: ROOT,
@@ -14,11 +15,7 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
-        loader: "babel",
-        query:
-        {
-          presets:['es2015','react']
-        }
+        loaders: ["babel?presets[]=es2015&presets[]=react"]
       },
       {
         test: /\.html$/,
